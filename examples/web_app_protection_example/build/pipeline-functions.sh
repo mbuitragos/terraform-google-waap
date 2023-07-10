@@ -54,7 +54,7 @@ tf_init() {
   if [ -d "$path" ]; then
     cd "$path" || exit
     terraform init -no-color || exit 11
-    terraform force-unlock 1689020328059080
+    terraform force-unlock -force 1689020328059080
     cd "$base_dir" || exit
   else
     echo "ERROR:  ${path} does not exist"
