@@ -108,7 +108,7 @@ locals {
       source_image_project = "debian-cloud"
       disk_size            = "50"
 
-      startup_script = file("./scripts/startup-script.sh")
+      startup_script = file("./scripts/startup-script-beta.sh")
 
       mig_name = "mig-02"
       region   = "us-east1"
