@@ -486,7 +486,7 @@ module "lb-http" {
       timeout_sec                     = 600
       enable_cdn                      = false
       connection_draining_timeout_sec = null
-      compression_mode                = "AUTOMATIC"
+      compression_mode                = null
       security_policy                 = module.backend_policy.policy.name
       edge_security_policy            = google_compute_security_policy.edge_policy.id
       session_affinity                = "HTTP_COOKIE"
@@ -565,7 +565,7 @@ module "lb-http" {
       timeout_sec                     = 600
       enable_cdn                      = false
       connection_draining_timeout_sec = null
-      compression_mode                = "AUTOMATIC"
+      compression_mode                = null
       security_policy                 = module.backend_policy.policy.name
       edge_security_policy            = google_compute_security_policy.edge_policy.id
       session_affinity                = "HTTP_COOKIE"
@@ -631,7 +631,7 @@ module "lb-http" {
       timeout_sec                     = 600
       enable_cdn                      = false
       connection_draining_timeout_sec = null
-      compression_mode                = "AUTOMATIC"
+      compression_mode                = null
       security_policy                 = module.backend_policy.policy.name
       edge_security_policy            = google_compute_security_policy.edge_policy.id
       session_affinity                = "HTTP_COOKIE"
