@@ -26,8 +26,8 @@ $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev
 apt-get update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ## Code to deploy Juice Shop
-docker pull bkimminich/juice-shop
-docker run -d -p 80:3000 bkimminich/juice-shop
+docker pull hello-seattle
+docker run -d -p 80:3000 hello-seattle
 
 ## Code to deploy Hello World
 # docker pull crccheck/hello-world
