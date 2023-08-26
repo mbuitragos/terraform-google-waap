@@ -471,7 +471,7 @@ module "lb-http" {
   use_ssl_certificates = false
   ssl                  = false
   https_redirect       = false
-  quic                 = true
+  quic                 = false
 
   create_url_map = var.url_map ? false : true
   url_map        = try(google_compute_url_map.traffic_mgmt[0].self_link, null)
