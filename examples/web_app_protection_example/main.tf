@@ -566,8 +566,8 @@ module "lb-http" {
       enable_cdn                      = false
       connection_draining_timeout_sec = null
       compression_mode                = null
-      security_policy                 = module.backend_policy.policy.name
-      edge_security_policy            = google_compute_security_policy.edge_policy.id
+      security_policy                 = null
+      edge_security_policy            = null
       session_affinity                = "HTTP_COOKIE"
       affinity_cookie_ttl_sec         = null
       custom_request_headers          = null
@@ -632,8 +632,8 @@ module "lb-http" {
       enable_cdn                      = false
       connection_draining_timeout_sec = null
       compression_mode                = null
-      security_policy                 = module.backend_policy.policy.name
-      edge_security_policy            = google_compute_security_policy.edge_policy.id
+      security_policy                 = null
+      edge_security_policy            = null
       session_affinity                = "HTTP_COOKIE"
       affinity_cookie_ttl_sec         = null
       custom_request_headers          = null
