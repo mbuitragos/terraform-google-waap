@@ -17,17 +17,15 @@
 # Variáveis
 NGINX_CONF_PATH="/etc/nginx/sites-available/default"
 WEB_ROOT="/var/www/html"
-CUSTOM_PAGE="custom_page.html"
+CUSTOM_PAGE="index.html"
 
 # Atualiza o sistema
 sudo apt update
 
 # Instala o Nginx
 sudo apt install nginx -y
+sudo chmod -R 755 $WEB_ROOT
 
 # Cria a página personalizada
-sudo echo "<html><body><h1>WEB APP VERSION 1</h1><p>Region: us-east1</p></body></html>" | tee $WEB_ROOT/$CUSTOM_PAGE
-
-# Configuração do Nginx
-sudo sed -i 's|/var/www/html;|/var/www/html/'$CUSTOM_PAGE';|' $NGINX_CONF_PATH
+sudo echo "<html><body><h1>VERSION 2 WEB APP</h1><p>Region: us-east1</p></body></html>" | tee $WEB_ROOT/$CUSTOM_PAGE
 sudo systemctl restart nginx
