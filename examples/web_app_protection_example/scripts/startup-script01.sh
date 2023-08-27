@@ -21,7 +21,6 @@ CUSTOM_PAGE="custom_page.html"
 
 # Atualiza o sistema
 sudo apt update
-sudo apt upgrade -y
 
 # Instala o Nginx
 sudo apt install nginx -y
