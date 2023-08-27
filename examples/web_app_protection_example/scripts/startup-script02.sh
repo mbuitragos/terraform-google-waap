@@ -27,5 +27,5 @@ sudo apt install nginx -y
 sudo chmod -R 755 $WEB_ROOT
 
 # Cria a página personalizada
-sudo echo "<html><body><h1>VERSION 2 WEB APP</h1><p>Region: us-east1</p></body></html>" | tee $WEB_ROOT/$CUSTOM_PAGE
+sudo echo "<html><body><h1>VERSION 2 WEB APP</h1><h3>Backend 02</h3><p>Region: us-east1</p></body></html>" | tee $WEB_ROOT/$CUSTOM_PAGE
 sudo systemctl restart nginx
